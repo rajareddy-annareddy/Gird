@@ -1,0 +1,2234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid task</title>
+    <style>
+        .continer{
+            background-color: aqua;
+            display: grid;
+            height: 110vh;
+            border: 2px solid black;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows:repeat(3,1fr) ;
+            padding: 20px;
+            gap: 20px;
+        }
+        .box1{
+            display: grid;
+            border: 2px solid black;
+            background-color: rgb(99, 95, 95);
+            grid-template-columns: repeat(7,1fr);
+            grid-template-rows:repeat(12,1fr) ;
+        }
+        .subbox1{
+            grid-row: 1/7;
+            grid-column: 1/2;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .subbox2{
+            grid-row: 1/7;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox3{
+            grid-row: 1/7;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox4{
+            grid-row: 1/3;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox5{
+            grid-row: 3/5;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox6{
+            grid-row: 5/7;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox7{
+            grid-row: 7/9;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox8{
+            grid-row: 9/11;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox9{
+            grid-row: 11/13;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox10{
+            grid-row: 1/4;
+            grid-column: 5/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox11{
+            grid-row: 4/7;
+            grid-column: 5/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox12{
+            grid-row: 1/4;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox13{
+            grid-row: 1/4;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox14{
+            grid-row: 4/7;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox15{
+            grid-row: 4/7;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox16{
+            grid-row: 7/9;
+            grid-column: 1/2;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .subbox17{
+            grid-row: 7/9;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox18{
+            grid-row: 7/9;
+            grid-column: 3/4;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .subbox19{
+            grid-row: 9/11;
+            grid-column: 1/2;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox20{
+            grid-row:11/13;
+            grid-column: 1/2;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox21{
+            grid-row: 11/13;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox22{
+            grid-row: 9/11;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox23{
+            grid-row: 9/11;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox24{
+            grid-row: 11/13;
+            grid-column: 3/4;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .subbox25{
+            grid-row: 9/11;
+            grid-column: 5/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox26{
+            grid-row: 11/13;
+            grid-column: 5/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .subbox27{
+            grid-row: 7/9;
+            grid-column: 5/8;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .box2{
+            display: grid;
+            border: 2px solid black;
+            background-color: rgb(99, 95, 95);
+            grid-template-columns: repeat(10,1fr);
+            grid-template-rows:repeat(12,1fr) ;
+        }
+        .div1{
+            grid-row: 1/4;
+            grid-column: 1/2;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div2{
+            grid-row: 1/4;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div3{
+            grid-row: 4/7;
+            grid-column: 1/2;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div4{
+            grid-row: 4/7;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div5{
+            grid-row: 1/4;
+            grid-column: 3/5;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .div6{
+            grid-row: 1/4;
+            grid-column: 5/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div7{
+            grid-row: 1/4;
+            grid-column: 7/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div8{
+            grid-row: 1/2;
+            grid-column: 9/10;
+            background-color:white;
+            border: 2px solid black;
+        }
+        .div9{
+            grid-row: 1/2;
+            grid-column: 10/11;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div10{
+            grid-row: 2/3;
+            grid-column: 9/10;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div11{
+            grid-row: 3/4;
+            grid-column: 9/10;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div12{
+            grid-row: 3/4;
+            grid-column: 10/11;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .div13{
+            grid-row: 2/3;
+            grid-column: 10/11;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div14{
+            grid-row: 4/5;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div15{
+            grid-row: 4/5;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div16{
+            grid-row: 5/6;
+            grid-column: 3/4;
+            background-color:blue;
+            border: 2px solid black;
+        }
+        .div17{
+            grid-row: 5/6;
+            grid-column: 4/5;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .div18{
+            grid-row: 6/7;
+            grid-column: 3/4;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .div19{
+            grid-row: 6/7;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div20{
+            grid-row: 4/7;
+            grid-column: 5/7;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .div21{
+            grid-row: 4/7;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div22{
+            grid-row: 4/7;
+            grid-column: 8/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div23{
+            grid-row: 4/7;
+            grid-column: 9/11;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .div24{
+            grid-row: 7/9;
+            grid-column: 1/2;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .div25{
+            grid-row: 7/9;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div26{
+            grid-row: 7/9;
+            grid-column: 3/5;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .div27{
+            grid-row: 7/9;
+            grid-column: 5/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div28{
+            grid-row: 7/8;
+            grid-column: 7/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div29{
+            grid-row: 8/9;
+            grid-column: 7/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div30{
+            grid-row: 7/9;
+            grid-column: 9/11;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div31{
+            grid-row: 9/10;
+            grid-column: 1/2;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .div32{
+            grid-row: 10/11;
+            grid-column: 1/2;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .div33{
+            grid-row: 11/12;
+            grid-column: 1/2;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div34{
+            grid-row: 12/13;
+            grid-column: 1/2;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div35{
+            grid-row: 9/10;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div36{
+            grid-row: 10/11;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div37{
+            grid-row: 11/13;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div38{
+            grid-row: 9/10;
+            grid-column: 3/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div39{
+            grid-row: 10/11;
+            grid-column: 3/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div40{
+            grid-row: 11/13;
+            grid-column: 3/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div41{
+            grid-row: 9/10;
+            grid-column: 5/7;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .div42{
+            grid-row: 10/11;
+            grid-column: 5/6;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .div43{
+            grid-row: 10/11;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div44{
+            grid-row: 11/13;
+            grid-column: 5/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div45{
+            grid-row: 9/10;
+            grid-column: 7/9;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .div46{
+            grid-row: 10/11;
+            grid-column: 7/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div47{
+            grid-row: 11/13;
+            grid-column: 7/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div48{
+            grid-row: 9/10;
+            grid-column: 9/11;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div49{
+            grid-row: 10/11;
+            grid-column: 9/11;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div50{
+            grid-row: 11/13;
+            grid-column: 9/11;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .box3{
+            display: grid;
+            border: 2px solid black;
+            background-color: rgb(99, 95, 95);
+            grid-template-columns: repeat(40,1fr);
+            grid-template-rows:repeat(5,1fr) ;
+        }
+        .a1{
+            grid-row: 1/2;
+            grid-column: 1/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a2{
+            grid-row: 1/2;
+            grid-column: 7/13;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a3{
+            grid-row: 1/2;
+            grid-column: 13/19;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a4{
+            grid-row: 2/3;
+            grid-column: 1/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a5{
+            grid-row: 2/3;
+            grid-column: 5/10;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .a6{
+            grid-row: 2/3;
+            grid-column: 10/15;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a7{
+            grid-row: 2/3;
+            grid-column: 15/19;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a8{
+            grid-row: 1/2;
+            grid-column: 19/23;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a9{
+            grid-row: 2/3;
+            grid-column: 19/23;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a10{
+            grid-row: 1/2;
+            grid-column: 23/29;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a11{
+            grid-row: 1/2;
+            grid-column: 29/33;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a12{
+            grid-row: 1/2;
+            grid-column: 33/37;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a13{
+            grid-row: 1/2;
+            grid-column: 37/41;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a14{
+            grid-row: 2/3;
+            grid-column: 23/29;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a15{
+            grid-row: 2/3;
+            grid-column: 29/33;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .a16{
+            grid-row: 2/3;
+            grid-column: 33/37;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .a17{
+            grid-row: 2/3;
+            grid-column: 37/41;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a18{
+            grid-row: 3/5;
+            grid-column: 1/19;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a19{
+            grid-row: 3/5;
+            grid-column: 19/23;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a20{
+            grid-row: 3/4;
+            grid-column: 23/26;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .a21{
+            grid-row: 3/4;
+            grid-column: 26/29;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .a22{
+            grid-row: 4/5;
+            grid-column: 23/26;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a23{
+            grid-row: 4/5;
+            grid-column: 26/29;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a24{
+            grid-row: 3/5;
+            grid-column: 29/33;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a25{
+            grid-row: 3/5;
+            grid-column: 33/37;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .a26{
+            grid-row: 3/5;
+            grid-column: 37/41;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a27{
+            grid-row: 5/6;
+            grid-column: 1/19;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .a28{
+            grid-row: 5/6;
+            grid-column: 19/23;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a29{
+            grid-row: 5/6;
+            grid-column: 23/29;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a30{
+            grid-row: 5/6;
+            grid-column: 29/33;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .a31{
+            grid-row: 5/6;
+            grid-column: 33/37;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .a32{
+            grid-row: 5/6;
+            grid-column: 37/41;
+            background-color: white;
+            border: 2px solid black;
+        }
+
+        .box4{
+            display: grid;
+            border: 2px solid black;
+            background-color: rgb(99, 95, 95);
+            grid-template-columns: repeat(10,1fr);
+            grid-template-rows:repeat(8,1fr) ;
+        }
+        .b1{
+            grid-row: 1/4;
+            grid-column: 1/4;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .b2{
+            grid-row: 1/4;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b3{
+            grid-row: 1/2;
+            grid-column: 5/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b4{
+            grid-row: 2/3;
+            grid-column: 5/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b5{
+            grid-row: 3/4;
+            grid-column: 5/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b6{
+            grid-row: 1/2;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b7{
+            grid-row: 2/3;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b8{
+            grid-row: 3/4;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b9{
+            grid-row: 1/2;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b10{
+            grid-row: 2/3;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b11{
+            grid-row: 3/4;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b12{
+            grid-row: 1/4;
+            grid-column: 8/11;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b13{
+            grid-row: 4/5;
+            grid-column: 1/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b14{
+            grid-row: 5/6;
+            grid-column: 1/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b15{
+            grid-row: 6/7;
+            grid-column: 1/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b16{
+            grid-row: 4/6;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b17{
+            grid-row: 6/7;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b18{
+            grid-row: 4/6;
+            grid-column: 5/8;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .b19{
+            grid-row: 6/7;
+            grid-column: 5/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b20{
+            grid-row: 4/6;
+            grid-column: 8/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b21{
+            grid-row: 4/6;
+            grid-column: 9/10;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b22{
+            grid-row: 4/6;
+            grid-column: 10/11;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .b23{
+            grid-row: 6/7;
+            grid-column: 8/11;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b24{
+            grid-row: 7/8;
+            grid-column: 1/2;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .b25{
+            grid-row: 7/8;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b26{
+            grid-row: 7/8;
+            grid-column: 3/4;
+            background-color:blue;
+            border: 2px solid black;
+        }
+        .b27{
+            grid-row: 8/9;
+            grid-column: 1/2;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b28{
+            grid-row: 8/9;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b29{
+            grid-row: 8/9;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .b30{
+            grid-row: 7/9;
+            grid-column: 4/5;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .b31{
+            grid-row: 7/9;
+            grid-column: 5/8;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .b32{
+            grid-row: 7/9;
+            grid-column: 8/11;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .box5{
+            display: grid;
+            border: 2px solid black;
+            background-color: rgb(99, 95, 95);
+            grid-template-columns: repeat(11,1fr);
+            grid-template-rows:repeat(10,1fr) ;
+        }
+        
+
+.c1{
+    background-color: white;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: 2px solid black ;
+}
+.c2{
+    background-color: white;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    border: 2px solid black ;
+}
+.c3{
+    background-color: yellow;
+    grid-column: 4/5;
+    grid-row: 1/2;
+    border: 2px solid black ;
+}
+.c4{
+    background-color: white;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 2px solid black ;
+}
+.c5{
+    background-color: red;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    border: 2px solid black ;
+}
+.c6{
+    background-color: white;
+    grid-column: 4/5;
+    grid-row: 2/3;
+    border: 2px solid black ;
+}
+.c7{
+    background-color: white;
+    grid-column: 5/7;
+    grid-row: 1/3;
+    border: 2px solid black ;
+}
+.c8{
+    background-color: white;
+    grid-column: 7/8;
+    grid-row: 1/3;
+    border: 2px solid black ;
+}
+.c9{
+    background-color: white;
+    grid-column: 8/9;
+    grid-row: 1/2;
+    border: 2px solid black ;
+}
+.c10{
+    background-color: white;
+    grid-column: 9/10;
+    grid-row: 1/2;
+    border: 2px solid black ;
+}
+.c11{
+    background-color: white;
+    grid-column: 8/9;
+    grid-row: 2/3;
+    border: 2px solid black ;
+}
+.c12{
+    background-color: white;
+    grid-column: 9/10;
+    grid-row: 2/3;
+    border: 2px solid black ;
+}
+.c13{
+    background-color: white;
+    grid-column: 10/11;
+    grid-row: 1/3;
+    border: 2px solid black ;
+}
+.c14{
+    background-color: rgb(243, 243, 246);
+    grid-column: 11/12;
+    grid-row: 1/3;
+    border: 2px solid black ;
+}
+.c15{
+    background-color: rgb(19, 15, 228);
+    grid-column: 1/3;
+    grid-row: 3/4;
+    border: 2px solid black ;
+}
+.c16{
+    background-color: white;
+    grid-column: 3/5;
+    grid-row: 3/4;
+    border: 2px solid black ;
+}
+.c17{
+    background-color: white;
+    grid-column: 1/3;
+    grid-row: 4/5;
+    border: 2px solid black ;
+}
+.c18{
+    background-color: blue;
+    grid-column: 3/5;
+    grid-row: 4/5;
+    border: 2px solid black ;
+}
+.c19{
+    background-color: white;
+    grid-column: 1/3;
+    grid-row: 5/6;
+    border: 2px solid black ;
+}
+.c20{
+    background-color: red;
+    grid-column: 3/5;
+    grid-row: 5/6;
+    border: 2px solid black ;
+}
+.c21{
+    background-color: rgb(239, 237, 237);
+    grid-column: 5/7;
+    grid-row: 3/6;
+    border: 2px solid black ;
+}
+.c22 {
+    background-color: white;
+    grid-column: 7/8;
+    grid-row: 3/6;
+    border: 2px solid black ;
+}
+.c23{
+    background-color: white;
+    grid-column: 8/10;
+    grid-row: 3/4;
+    border: 2px solid black ;
+}
+.c24{
+    background-color: white;
+    grid-column: 8/10;
+    grid-row: 4/5;
+    border: 2px solid black ;
+}
+.c25{
+    background-color: white;
+    grid-column: 8/10;
+    grid-row: 5/6;
+    border: 2px solid black ;
+}
+.c26{
+    background-color: white;
+    grid-column: 10/11;
+    grid-row: 3/6;
+    border: 2px solid black ;
+}
+.c27{
+    background-color: rgb(248, 248, 250);
+    grid-column: 11/12;
+    grid-row: 3/6;
+    border: 2px solid black ;
+}
+.c28{
+    background-color: white;
+    grid-column: 1/5;
+    grid-row: 6/7;
+    border: 2px solid black ;
+}
+.c29{
+    background-color: white;
+    grid-column: 1/5;
+    grid-row: 7/8;
+    border: 2px solid black ;
+}
+.c30{
+    background-color: white;
+    grid-column: 5/7;
+    grid-row: 6/7;
+    border: 2px solid black ;
+}
+.c31{
+    background-color: white;
+    grid-column: 5/7;
+    grid-row: 7/8;
+    border: 2px solid black ;
+}
+.c32{
+    background-color: rgb(243, 243, 239);
+    grid-column: 7/8;
+    grid-row: 6/7;
+    border: 2px solid black ;
+}
+.c33{
+    background-color: rgb(246, 246, 236);
+    grid-column: 7/8;
+    grid-row: 7/8;
+    border: 2px solid black ;
+}
+.c34{
+    background-color: red;
+    grid-column: 8/10;
+    grid-row: 6/7;
+    border: 2px solid black ;
+}
+.c35{
+    background-color: white;
+    grid-column: 8/10;
+    grid-row: 7/8;
+    border: 2px solid black ;
+}
+.c36{
+    background-color: white;
+    grid-column: 10/11;
+    grid-row: 6/7;
+    border: 2px solid black ;
+}
+.c37{
+    background-color: white;
+    grid-column: 10/11;
+    grid-row: 7/8;
+    border: 2px solid black ;
+}
+.c38{
+    background-color: red;
+    grid-column: 11/12;
+    grid-row: 6/7;
+    border: 2px solid black ;
+}
+.c39{
+    background-color: rgb(233, 233, 242);
+    grid-column: 11/12;
+    grid-row: 7/8;
+    border: 2px solid black ;
+}
+.c40{
+    background-color: rgb(244, 244, 239);
+    grid-column: 1/5;
+    grid-row: 8/11;
+    border: 2px solid black ;
+}
+.c41{
+    background-color: white;
+    grid-column: 5/6;
+    grid-row: 8/9;
+    border: 2px solid black ;
+}
+.c42 {
+    background-color: rgb(244, 244, 240);
+    grid-column: 5/6;
+    grid-row: 9/10;
+    border: 2px solid black ;
+}
+.c43{
+    background-color: white;
+    grid-column: 5/6;
+    grid-row: 10/11;
+    border: 2px solid black ;
+}
+.c44{
+    background-color: white;
+    grid-column: 6/7;
+    grid-row: 8/9;
+    border: 2px solid black ;
+}
+.c45 {
+    background-color: yellow;
+    grid-column: 6/7;
+    grid-row: 9/10;
+    border: 2px solid black ;
+}
+.c46{
+    background-color: white;
+    grid-column: 6/7;
+    grid-row: 10/11;
+    border: 2px solid black ;
+}
+.c47{
+    background-color: white;
+    grid-column: 7/8;
+    grid-row: 8/11;
+    border: 2px solid black ;
+}
+.c48{
+    background-color: white;
+    grid-column: 8/10;
+    grid-row: 8/11;
+    border: 2px solid black ;
+}
+.c49{
+    background-color: white;
+    grid-column: 10/11;
+    grid-row: 8/11;
+    border: 2px solid black ;
+}
+
+.c50 {
+    background-color: blue;
+    grid-column: 11/12;
+    grid-row: 8/11;
+    border: 2px solid black ;
+}
+        .box6{
+            display: grid;
+            border: 2px solid black;
+            background-color: rgb(99, 95, 95);
+            grid-template-columns: repeat(9,1fr);
+            grid-template-rows:repeat(34,1fr) ;
+        }
+        .div61{
+            grid-row: 1/5;
+            grid-column: 1/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div62{
+            grid-row: 1/5;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div63{
+            grid-row: 1/5;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div64{
+            grid-row: 1/5;
+            grid-column: 5/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div65{
+            grid-row: 1/5;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div66{
+            grid-row: 1/5;
+            grid-column: 7/9;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .div67{
+            grid-row: 1/5;
+            grid-column: 9/10;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div68{
+            grid-row: 5/9;
+            grid-column: 1/2;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .div69{
+            grid-row: 5/9;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div610{
+            grid-row: 9/15;
+            grid-column: 1/2;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .div611{
+            grid-row: 9/15;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div612{
+            grid-row: 15/19;
+            grid-column: 1/2;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div613{
+            grid-row: 15/19;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div614{
+            grid-row: 5/19;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div615{
+            grid-row: 5/12;
+            grid-column: 4/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div616{
+            grid-row: 12/19;
+            grid-column: 4/7;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .div617{
+            grid-row: 5/9;
+            grid-column: 7/8;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .div618{
+            grid-row: 5/9;
+            grid-column: 8/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div619{
+            grid-row: 9/15;
+            grid-column: 7/8;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .div620{
+            grid-row: 9/15;
+            grid-column: 8/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div621{
+            grid-row: 15/19;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div622{
+            grid-row: 15/19;
+            grid-column: 8/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div623{
+            grid-row: 5/19;
+            grid-column: 9/10;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div624{
+            grid-row: 19/31;
+            grid-column: 1/3;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .div625{
+            grid-row: 19/31;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div626{
+            grid-row: 19/31;
+            grid-column: 4/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div627{
+            grid-row: 19/23;
+            grid-column: 7/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div628{
+            grid-row: 23/27;
+            grid-column: 7/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div629{
+            grid-row: 27/31;
+            grid-column: 7/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div630{
+            grid-row: 19/31;
+            grid-column: 9/10;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div631{
+            grid-row: 31/35;
+            grid-column: 1/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div632{
+            grid-row: 31/35;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div633{
+            grid-row: 31/35;
+            grid-column: 4/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div634{
+            grid-row: 31/35;
+            grid-column: 7/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .div635{
+            grid-row: 31/35;
+            grid-column: 9/10;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .box7{
+            display: grid;
+            border: 2px solid black;
+            background-color: rgb(99, 95, 95);
+            grid-template-columns: repeat(8,1fr);
+            grid-template-rows:repeat(23,1fr) ;
+        }
+        .d1{
+            grid-row: 1/8;
+            grid-column: 1/4;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .d2{
+            grid-row: 1/8;
+            grid-column: 4/6;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .d3{
+            grid-row: 1/8;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d4{
+            grid-row: 1/5;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d5{
+            grid-row: 5/8;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d6{
+            grid-row: 1/3;
+            grid-column: 8/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d7{
+            grid-row: 3/6;
+            grid-column: 8/9;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .d8{
+            grid-row: 6/8;
+            grid-column: 8/9;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .d9{
+            grid-row: 8/10;
+            grid-column: 1/2;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d10{
+            grid-row: 8/10;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d11{
+            grid-row: 8/10;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d12{
+            grid-row: 10/12;
+            grid-column: 1/2;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .d13{
+            grid-row: 10/12;
+            grid-column: 2/3;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .d14{
+            grid-row: 10/12;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d15{
+            grid-row: 12/14;
+            grid-column: 1/2;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d16{
+            grid-row: 12/14;
+            grid-column: 2/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d17{
+            grid-row: 12/14;
+            grid-column: 3/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d18{
+            grid-row: 8/14;
+            grid-column: 4/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d19{
+            grid-row: 8/14;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d20{
+            grid-row: 8/14;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d21{
+            grid-row: 8/14;
+            grid-column: 8/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d22{
+            grid-row: 14/16;
+            grid-column: 1/4;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d23{
+            grid-row: 16/18;
+            grid-column: 1/4;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .d24{
+            grid-row: 14/16;
+            grid-column: 4/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d25{
+            grid-row: 16/18;
+            grid-column: 4/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d26{
+            grid-row: 14/16;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d27{
+            grid-row: 16/18;
+            grid-column: 6/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d28{
+            grid-row: 16/18;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d29{
+            grid-row: 14/16;
+            grid-column: 7/8;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d30{
+            grid-row: 14/16;
+            grid-column: 8/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d31{
+            grid-row: 16/18;
+            grid-column: 8/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d32{
+            grid-row: 18/24;
+            grid-column: 1/4;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .d33{
+            grid-row: 18/20;
+            grid-column: 4/5;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .d34{
+            grid-row: 20/22;
+            grid-column: 4/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d35{
+            grid-row: 22/24;
+            grid-column: 4/5;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .d36{
+            grid-row: 22/24;
+            grid-column: 5/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d37{
+            grid-row: 20/22;
+            grid-column: 5/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d38{
+            grid-row: 18/20;
+            grid-column: 5/6;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .d39{
+            grid-row: 18/24;
+            grid-column: 6/7;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .d40{
+            grid-row: 18/24;
+            grid-column: 7/8;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .d41{
+            grid-row: 18/24;
+            grid-column: 8/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .box8{
+            display: grid;
+            border: 2px solid black;
+            background-color: rgb(99, 95, 95);
+            grid-template-columns: repeat(20,1fr);
+            grid-template-rows:repeat(7,1fr) ;
+        }
+        .e1{
+            grid-row: 1/3;
+            grid-column: 1/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e2{
+            grid-row: 1/3;
+            grid-column: 3/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e3{
+            grid-row: 1/2;
+            grid-column: 9/11;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .e4{
+            grid-row: 2/3;
+            grid-column: 9/11;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .e5{
+            grid-row: 1/2;
+            grid-column: 11/13;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e6{
+            grid-row: 2/3;
+            grid-column: 11/13;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e7{
+            grid-row: 1/2;
+            grid-column: 13/15;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e8{
+            grid-row: 2/3;
+            grid-column: 13/15;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e9{
+            grid-row: 1/3;
+            grid-column: 15/17;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .e10{
+            grid-row: 1/3;
+            grid-column: 17/19;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e11{
+            grid-row: 1/3;
+            grid-column: 19/21;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e12{
+            grid-row: 3/5;
+            grid-column: 1/3;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .e13{
+            grid-row: 3/4;
+            grid-column: 3/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e14{
+            grid-row: 4/5;
+            grid-column: 3/5;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e15{
+            grid-row: 3/4;
+            grid-column: 5/7;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e16{
+            grid-row: 3/4;
+            grid-column: 7/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e17{
+            grid-row: 4/5;
+            grid-column: 5/7;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .e18{
+            grid-row: 4/5;
+            grid-column: 7/9;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .e19{
+            grid-row: 3/5;
+            grid-column: 9/15;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e20{
+            grid-row: 3/5;
+            grid-column: 15/19;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e21{
+            grid-row: 3/5;
+            grid-column: 19/21;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e22{
+            grid-row: 5/7;
+            grid-column: 1/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e23{
+            grid-row: 5/6;
+            grid-column: 3/6;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .e24{
+            grid-row: 5/6;
+            grid-column: 6/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e25{
+            grid-row: 6/7;
+            grid-column: 3/6;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .e26{
+            grid-row: 6/7;
+            grid-column: 6/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e27{
+            grid-row: 5/7;
+            grid-column: 9/15;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e28{
+            grid-row: 5/7;
+            grid-column: 15/19;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e29{
+            grid-row: 5/7;
+            grid-column: 19/21;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e30{
+            grid-row: 7/8;
+            grid-column: 1/3;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e31{
+            grid-row: 7/8;
+            grid-column: 3/9;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e32{
+            grid-row: 7/8;
+            grid-column: 9/11;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e33{
+            grid-row: 7/8;
+            grid-column: 11/13;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .e34{
+            grid-row: 7/8;
+            grid-column: 13/15;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .e35{
+            grid-row: 7/8;
+            grid-column: 15/19;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .e36{
+            grid-row: 7/8;
+            grid-column: 19/21;
+            background-color: white;
+            border: 2px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="continer">
+        
+            <div class="box1">
+                <div class="subbox1"></div>
+                <div class="subbox2"></div>
+                <div class="subbox3"></div>
+                <div class="subbox4"></div>
+                <div class="subbox5"></div>
+                <div class="subbox6"></div>
+                <div class="subbox7"></div>
+                <div class="subbox8"></div>
+                <div class="subbox9"></div>
+                <div class="subbox10"></div>
+                <div class="subbox11"></div>
+                <div class="subbox12"></div>
+                <div class="subbox13"></div>
+                <div class="subbox14"></div>
+                <div class="subbox15"></div>
+                <div class="subbox16"></div>
+                <div class="subbox17"></div>
+                <div class="subbox18"></div>
+                <div class="subbox19"></div>
+                <div class="subbox20"></div>
+                <div class="subbox21"></div>
+                <div class="subbox22"></div>
+                <div class="subbox23"></div>
+                <div class="subbox24"></div>
+                <div class="subbox25"></div>
+                <div class="subbox26"></div>
+                <div class="subbox27"></div>
+  
+            </div>
+        <div class="box2">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+            <div class="div4"></div>
+            <div class="div5"></div>
+            <div class="div6"></div>
+            <div class="div7"></div>
+            <div class="div8"></div>
+            <div class="div9"></div>
+            <div class="div10"></div>
+            <div class="div11"></div>
+            <div class="div12"></div>
+            <div class="div13"></div>
+            <div class="div14"></div>
+            <div class="div15"></div>
+            <div class="div16"></div>
+            <div class="div17"></div>
+            <div class="div18"></div>
+            <div class="div19"></div>
+            <div class="div20"></div>
+            <div class="div21"></div>
+            <div class="div22"></div>
+            <div class="div23"></div>
+            <div class="div24"></div>
+            <div class="div25"></div>
+            <div class="div26"></div>
+            <div class="div27"></div>
+            <div class="div28"></div>
+            <div class="div29"></div>
+            <div class="div30"></div>
+            <div class="div31"></div>
+            <div class="div32"></div>
+            <div class="div33"></div>
+            <div class="div34"></div>
+            <div class="div35"></div>
+            <div class="div36"></div>
+            <div class="div37"></div>
+            <div class="div38"></div>
+            <div class="div39"></div>
+            <div class="div40"></div>
+            <div class="div41"></div>
+            <div class="div42"></div>
+            <div class="div43"></div>
+            <div class="div44"></div>
+            <div class="div45"></div>
+            <div class="div46"></div>
+            <div class="div47"></div>
+            <div class="div48"></div>
+            <div class="div49"></div>
+            <div class="div50"></div>
+        </div>
+        <div class="box3">
+            <div class="a1"></div>
+            <div class="a2"></div>
+            <div class="a3"></div>
+            <div class="a4"></div>
+            <div class="a5"></div>
+            <div class="a6"></div>
+            <div class="a7"></div>
+            <div class="a8"></div>
+            <div class="a9"></div>
+            <div class="a10"></div>
+            <div class="a11"></div>
+            <div class="a12"></div>
+            <div class="a13"></div>
+            <div class="a14"></div>
+            <div class="a15"></div>
+            <div class="a16"></div>
+            <div class="a17"></div>
+            <div class="a18"></div>
+            <div class="a19"></div>
+            <div class="a20"></div>
+            <div class="a21"></div>
+            <div class="a22"></div>
+            <div class="a23"></div>
+            <div class="a24"></div>
+            <div class="a25"></div>
+            <div class="a26"></div>
+            <div class="a27"></div>
+            <div class="a28"></div>
+            <div class="a29"></div>
+            <div class="a30"></div>
+            <div class="a31"></div>
+            <div class="a32"></div>
+            <div class="a33"></div>
+        </div>
+        <div class="box4">
+            <div class="b1"></div>
+            <div class="b2"></div>
+            <div class="b3"></div>
+            <div class="b4"></div>
+            <div class="b5"></div>
+            <div class="b6"></div>
+            <div class="b7"></div>
+            <div class="b8"></div>
+            <div class="b9"></div>
+            <div class="b10"></div>
+            <div class="b11"></div>
+            <div class="b12"></div>
+            <div class="b13"></div>
+            <div class="b14"></div>
+            <div class="b15"></div>
+            <div class="b16"></div>
+            <div class="b17"></div>
+            <div class="b18"></div>
+            <div class="b19"></div>
+            <div class="b20"></div>
+            <div class="b21"></div>
+            <div class="b22"></div>
+            <div class="b23"></div>
+            <div class="b24"></div>
+            <div class="b25"></div>
+            <div class="b26"></div>
+            <div class="b27"></div>
+            <div class="b28"></div>
+            <div class="b29"></div>
+            <div class="b30"></div>
+            <div class="b31"></div>
+            <div class="b32"></div>
+        </div>
+        <div class="box5">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+            <div class="c6"></div>
+            <div class="c7"></div>
+            <div class="c8"></div>
+            <div class="c9"></div>
+            <div class="c10"></div>
+            <div class="c11"></div>
+            <div class="c12"></div>
+            <div class="c13"></div>
+            <div class="c14"></div>
+            <div class="c15"></div>
+            <div class="c16"></div>
+            <div class="c17"></div>
+            <div class="c18"></div>
+            <div class="c19"></div>
+            <div class="c20"></div>
+            <div class="c21"></div>
+            <div class="c22"></div>
+            <div class="c23"></div>
+            <div class="c24"></div>
+            <div class="c25"></div>
+            <div class="c26"></div>
+            <div class="c27"></div>
+            <div class="c28"></div>
+            <div class="c29"></div>
+            <div class="c30"></div>
+            <div class="c31"></div>
+            <div class="c32"></div>
+            <div class="c33"></div>
+            <div class="c34"></div>
+            <div class="c35"></div>
+            <div class="c36"></div>
+            <div class="c37"></div>
+            <div class="c38"></div>
+            <div class="c39"></div>
+            <div class="c40"></div>
+            <div class="c41"></div>
+            <div class="c42"></div>
+            <div class="c43"></div>
+            <div class="c44"></div>
+            <div class="c45"></div>
+            <div class="c46"></div>
+            <div class="c47"></div>
+            <div class="c48"></div>
+            <div class="c49"></div>
+            <div class="c50"></div>
+        </div>
+        <div class="box6">
+            <div class="div61"></div>
+            <div class="div62"></div>
+            <div class="div63"></div>
+            <div class="div64"></div>
+            <div class="div65"></div>
+            <div class="div66"></div>
+            <div class="div67"></div>
+            <div class="div68"></div>
+            <div class="div69"></div>
+            <div class="div610"></div>
+            <div class="div611"></div>
+            <div class="div612"></div>
+            <div class="div613"></div>
+            <div class="div614"></div>
+            <div class="div615"></div>
+            <div class="div616"></div>
+            <div class="div617"></div>
+            <div class="div618"></div>
+            <div class="div619"></div>
+            <div class="div620"></div>
+            <div class="div621"></div>
+            <div class="div622"></div>
+            <div class="div623"></div>
+            <div class="div624"></div>
+            <div class="div625"></div>
+            <div class="div626"></div>
+            <div class="div627"></div>
+            <div class="div628"></div>
+            <div class="div629"></div>
+            <div class="div630"></div>
+            <div class="div631"></div>
+            <div class="div632"></div>
+            <div class="div633"></div>
+            <div class="div634"></div>
+            <div class="div635"></div>
+        </div>
+        <div class="box7">
+            <div class="d1"></div>
+            <div class="d2"></div>
+            <div class="d3"></div>
+            <div class="d4"></div>
+            <div class="d5"></div>
+            <div class="d6"></div>
+            <div class="d7"></div>
+            <div class="d8"></div>
+            <div class="d9"></div>
+            <div class="d10"></div>
+            <div class="d11"></div>
+            <div class="d12"></div>
+            <div class="d13"></div>
+            <div class="d14"></div>
+            <div class="d15"></div>
+            <div class="d16"></div>
+            <div class="d17"></div>
+            <div class="d18"></div>
+            <div class="d19"></div>
+            <div class="d20"></div>
+            <div class="d21"></div>
+            <div class="d22"></div>
+            <div class="d23"></div>
+            <div class="d24"></div>
+            <div class="d25"></div>
+            <div class="d26"></div>
+            <div class="d27"></div>
+            <div class="d28"></div>
+            <div class="d29"></div>
+            <div class="d30"></div>
+            <div class="d31"></div>
+            <div class="d32"></div>
+            <div class="d33"></div>
+            <div class="d34"></div>
+            <div class="d35"></div>
+            <div class="d36"></div>
+            <div class="d37"></div>
+            <div class="d38"></div>
+            <div class="d39"></div>
+            <div class="d40"></div>
+            <div class="d41"></div>
+        </div>
+        <div class="box8">
+            <div class="e1"></div>
+            <div class="e2"></div>
+            <div class="e3"></div>
+            <div class="e4"></div>
+            <div class="e5"></div>
+            <div class="e6"></div>
+            <div class="e7"></div>
+            <div class="e8"></div>
+            <div class="e9"></div>
+            <div class="e10"></div>
+            <div class="e11"></div>
+            <div class="e12"></div>
+            <div class="e13"></div>
+            <div class="e14"></div>
+            <div class="e15"></div>
+            <div class="e16"></div>
+            <div class="e17"></div>
+            <div class="e18"></div>
+            <div class="e19"></div>
+            <div class="e20"></div>
+            <div class="e21"></div>
+            <div class="e22"></div>
+            <div class="e23"></div>
+            <div class="e24"></div>
+            <div class="e25"></div>
+            <div class="e26"></div>
+            <div class="e27"></div>
+            <div class="e28"></div>
+            <div class="e29"></div>
+            <div class="e30"></div>
+            <div class="e31"></div>
+            <div class="e32"></div>
+            <div class="e33"></div>
+            <div class="e34"></div>
+            <div class="e35"></div>
+            <div class="e36"></div>
+            <!-- <div class="e38"></div>
+            <div class="e39"></div>
+        </div> -->
+        
+        <div class="box9"></div>
+        <div class="box10"></div>
+        <div class="box11"></div>
+        <div class="box12"></div>
+        
+    </div>
+</body>
+</html>
